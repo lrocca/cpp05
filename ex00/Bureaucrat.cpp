@@ -12,9 +12,6 @@
 
 #include "Bureaucrat.hpp"
 
-#define MIN_GRADE	150
-#define MAX_GRADE	1
-
 Bureaucrat::Bureaucrat() {}
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade)
