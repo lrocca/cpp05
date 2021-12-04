@@ -6,11 +6,10 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:35:33 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/03 19:15:30 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/04 02:19:55 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Bureaucrat.hpp"
 
 void	sectionTitle(const std::string& title) {
