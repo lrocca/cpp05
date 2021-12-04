@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:00:27 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/03 19:35:49 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/04 01:52:14 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ void	Bureaucrat::decrementGrade(int change) {
 }
 
 const char*	Bureaucrat::GradeTooLowException::what() const throw() {
-	return "Grade too low!";
+	return "Bureaucrat grade too low!";
 }
 
 const char*	Bureaucrat::GradeTooHighException::what() const throw() {
-	return "Grade too high!";
+	return "Bureaucrat grade too high!";
 }
 
 std::ostream&	operator<<(std::ostream &o, const Bureaucrat& bureaucrat) {
