@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:30:03 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/06 22:35:29 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/07 23:08:39 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	Form::execute(const Bureaucrat& executor) const {
 		std::cerr << "<Form> cannot execute unsigned form!" << std::endl;
 		throw std::exception();
 	}
-	if (gradeSign < executor.getGrade())
+	if (gradeExec < executor.getGrade())
 		throw GradeTooLowException();
 	executeConcrete();
 }
