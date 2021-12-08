@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:28 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:51:43 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/08 02:51:26 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 # include "Form.hpp"
 
-class ShrubberyCreationForm: public Form {
+class RobotomyRequestForm: public Form {
 	private:
-		ShrubberyCreationForm();
+		RobotomyRequestForm();
 		virtual void	executeConcrete() const;
 	public:
-		ShrubberyCreationForm(const std::string& target);
-		ShrubberyCreationForm(const ShrubberyCreationForm& other);
-		virtual ~ShrubberyCreationForm();
+		RobotomyRequestForm(const std::string& target);
+		RobotomyRequestForm(const RobotomyRequestForm& other);
+		virtual ~RobotomyRequestForm();
 
-		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& other);
+		RobotomyRequestForm&	operator=(const RobotomyRequestForm& other);
 };
 
 #endif

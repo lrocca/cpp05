@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:24 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/06 22:45:51 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/08 02:57:04 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ ShrubberyCreationForm::ShrubberyCreationForm(): Form() {}
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target)
 	: Form("ShrubberyCreationForm", target, 145, 137) {}
 
-ShrubberyCreationForm::~ShrubberyCreationForm() {
-}
-
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other) {
 	*this = other;
 }
 
+ShrubberyCreationForm::~ShrubberyCreationForm() {}
+
 ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other) {
-	if (this != &other) {
-	}
+	if (this != &other) {}
 	return *this;
 }
 

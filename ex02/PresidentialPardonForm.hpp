@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:28 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:51:43 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/07 23:17:12 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 # include "Form.hpp"
 
-class ShrubberyCreationForm: public Form {
+class PresidentialPardonForm: public Form {
 	private:
-		ShrubberyCreationForm();
+		PresidentialPardonForm();
 		virtual void	executeConcrete() const;
 	public:
-		ShrubberyCreationForm(const std::string& target);
-		ShrubberyCreationForm(const ShrubberyCreationForm& other);
-		virtual ~ShrubberyCreationForm();
+		PresidentialPardonForm(const std::string& target);
+		PresidentialPardonForm(const PresidentialPardonForm& other);
+		virtual ~PresidentialPardonForm();
 
-		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& other);
+		PresidentialPardonForm&	operator=(const PresidentialPardonForm& other);
 };
 
 #endif

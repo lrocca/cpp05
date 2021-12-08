@@ -6,7 +6,7 @@
 #    By: lrocca <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/02 16:35:24 by lrocca            #+#    #+#              #
-#    Updated: 2021/12/06 22:28:59 by lrocca           ###   ########.fr        #
+#    Updated: 2021/12/08 02:30:54 by lrocca           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	bureau
 FILES	=	main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-			# RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+			RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 OBJ		=	$(FILES:.cpp=.o)
 
