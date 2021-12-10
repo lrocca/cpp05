@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:28 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:43:30 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 20:11:53 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ class Intern {
 		Intern&	operator=(const Intern& other);
 
 		Form*	makeForm(const std::string& form, const std::string& target) const;
+
+		class FormNotFoundException: public std::exception {
+			virtual const char*	what() const throw();
+		};
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:24 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:52:41 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 20:12:32 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ Form	*Intern::makeForm(const std::string& form, const std::string& target) const
 	for (int i = 0; i < 3; i++)
 		if (names[i] == form)
 			return (this->*(forms[i]))(target);
-	std::cerr << "<Intern> No form matches " << form
-		<< ". May I bring you a coffee instead?" << std::endl;
-	return NULL;
+	throw FormNotFoundException();
+}
+
+const char*	Intern::FormNotFoundException::what() const throw() {
+	return "<Intern> Form not found! May I bring you a coffee instead?";
 }
