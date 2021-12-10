@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:35:33 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/10 18:26:03 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 19:38:38 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	main() {
 		PresidentialPardonForm form("formetto");
 		{
 			sectionTitle("execute unsigned form");
+			std::cout << form;
 			burro.executeForm(form);
 		}
 		{

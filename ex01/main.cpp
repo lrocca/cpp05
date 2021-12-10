@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:35:33 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/10 18:24:31 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 20:15:02 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,13 @@ int	main() {
 		Form	formino("formino", 42, 42);
 		Form	formone("formone", 1, 1);
 
-		std::cout << formino << formone;
+		std::cout << std::endl << formino << formone;
 
 		sectionTitle("sign twice");
 		burro.signForm(formino);
+		std::cout << formino;
 		burro.signForm(formino);
+
 		sectionTitle("grade too low");
 		burro.signForm(formone);
 	}
