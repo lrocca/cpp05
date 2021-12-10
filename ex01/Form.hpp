@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:30:29 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/04 02:42:27 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 17:50:45 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ class Form {
 		};
 
 		class GradeTooHighException: public std::exception {
+			virtual const char*	what() const throw();
+		};
+
+		class AlreadySignedException: public std::exception {
 			virtual const char*	what() const throw();
 		};
 };

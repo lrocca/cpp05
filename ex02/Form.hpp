@@ -54,6 +54,10 @@ class Form {
 		class GradeTooHighException: public std::exception {
 			virtual const char*	what() const throw();
 		};
+
+		class AlreadySignedException: public std::exception {
+			virtual const char*	what() const throw();
+		};
 };
 
 std::ostream&	operator<<(std::ostream &o, const Form& form);
