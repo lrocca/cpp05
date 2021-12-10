@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:24 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:56:47 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 17:26:45 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 PresidentialPardonForm::PresidentialPardonForm(): Form() {}
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string& target)
-	: Form("PresidentialPardonForm", target, 72, 45) {}
+	: Form("PresidentialPardonForm", target, 25, 5) {}
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& other) {
 	*this = other;
