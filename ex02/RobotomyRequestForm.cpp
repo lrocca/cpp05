@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 21:55:24 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:56:58 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 18:10:51 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ void	RobotomyRequestForm::executeConcrete() const {
 	if (rand() % 2)
 		std::cout << " has been successfully robotimized!" << std::endl;
 	else
-		std::cout << " had some problems and its robotimy failed!" << std::endl;
+		std::cout << " had some problems and its robotomy failed!" << std::endl;
 }
