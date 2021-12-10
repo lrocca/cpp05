@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:30:29 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:50:16 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 18:09:24 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,10 @@ class Form {
 		};
 
 		class AlreadySignedException: public std::exception {
+			virtual const char*	what() const throw();
+		};
+
+		class ExecuteUnsignedException: public std::exception {
 			virtual const char*	what() const throw();
 		};
 };

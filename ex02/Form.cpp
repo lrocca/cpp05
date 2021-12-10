@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:30:03 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/10 18:02:44 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 18:09:59 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,8 @@ void	Form::beSigned(const Bureaucrat& bureaucrat) {
 }
 
 void	Form::execute(const Bureaucrat& executor) const {
-	if (!isSigned) {
-		std::cerr << "<Form> cannot execute unsigned form!" << std::endl;
-		throw std::exception();
-	}
+	if (!isSigned)
+		throw ExecuteUnsignedException();
 	if (gradeExec < executor.getGrade())
 		throw GradeTooLowException();
 	executeConcrete();
@@ -92,6 +90,10 @@ const char*	Form::GradeTooHighException::what() const throw() {
 
 const char*	Form::AlreadySignedException::what() const throw() {
 	return "<Form> cannot sign a form twice!";
+}
+
+const char*	Form::ExecuteUnsignedException::what() const throw() {
+	return "<Form> cannot execute unsigned form!";
 }
 
 std::ostream&	operator<<(std::ostream &o, const Form& form) {
