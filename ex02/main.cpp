@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:35:33 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/08 02:58:40 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/10 18:26:03 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,51 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-// void	sectionTitle(const std::string& title) {
-// 	std::cout	<< std::endl
-// 				<< "*** " << title << " ***"
-// 				<< std::endl << std::endl;
-// }
+void	sectionTitle(const std::string& title) {
+	std::cout	<< std::endl
+				<< "*** " << title << " ***"
+				<< std::endl << std::endl;
+}
+
+void	testForm(const Bureaucrat& bureaucrat, Form& form) {
+	std::cout << form;
+	bureaucrat.signForm(form);
+	bureaucrat.executeForm(form);
+}
 
 int	main() {
-	// sectionTitle("constructor");
+	Bureaucrat	burro("burro", 1);
+	Bureaucrat	burretto("burretto", 42);
+	std::cout << burro << burretto;
 
 	try {
-		Bureaucrat	burro("burro", 42);
-		std::cout << burro;
-
-		ShrubberyCreationForm		formino("formino");
-		RobotomyRequestForm			formone("formone");
-		PresidentialPardonForm		formetto("formetto");
-
-		std::cout << formino;
-		std::cout << formone;
-
-		burro.signForm(formino);
-		burro.executeForm(formino);
-		burro.signForm(formone);
-		burro.executeForm(formone);
+		{
+			sectionTitle("shrubbery creation");
+			ShrubberyCreationForm form("formino");
+			testForm(burro, form);
+		}
+		{
+			sectionTitle("robotomy request");
+			RobotomyRequestForm form("formone");
+			testForm(burro, form);
+		}
+		{
+			sectionTitle("presidential pardon");
+			PresidentialPardonForm form("formetto");
+			testForm(burro, form);
+		}
+		PresidentialPardonForm form("formetto");
+		{
+			sectionTitle("execute unsigned form");
+			burro.executeForm(form);
+		}
+		{
+			sectionTitle("too low to execute");
+			burro.signForm(form);
+			burretto.executeForm(form);
+		}
 	}
 	catch (std::exception& e) {
 		std::cout << "Error: " << e.what() << std::endl;
 	}
-
-	// TODO
-	// grade too low to sign
-	// grade too low to execute
-	// form not signed
 }
