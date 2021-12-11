@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:35:33 by lrocca            #+#    #+#             */
-/*   Updated: 2021/12/10 19:38:38 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/12/11 17:14:22 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,20 @@ int	main() {
 	try {
 		{
 			sectionTitle("shrubbery creation");
-			ShrubberyCreationForm form("formino");
+			ShrubberyCreationForm form("home");
 			testForm(burro, form);
 		}
 		{
 			sectionTitle("robotomy request");
-			RobotomyRequestForm form("formone");
+			RobotomyRequestForm form("Bender");
 			testForm(burro, form);
 		}
 		{
 			sectionTitle("presidential pardon");
-			PresidentialPardonForm form("formetto");
+			PresidentialPardonForm form("lrocca");
 			testForm(burro, form);
 		}
-		PresidentialPardonForm form("formetto");
+		PresidentialPardonForm form("lrocca");
 		{
 			sectionTitle("execute unsigned form");
 			std::cout << form;
